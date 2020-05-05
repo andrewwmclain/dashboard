@@ -5,6 +5,8 @@
 #include <QTimer>
 #include <QTime>
 
+#include "httpmanager.h"
+
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -21,8 +23,13 @@ public:
 private slots:
     void setCurrentTime();
 
+    void processImage(QPixmap *);
+
+    void on_imgDL_pushButton_clicked();
+
 private:
     Ui::MainWindow *ui;
     QTimer* timer;
+    HTTPManager *httpManager;
 };
 #endif // MAINWINDOW_H

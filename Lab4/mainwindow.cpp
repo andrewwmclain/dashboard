@@ -2,12 +2,12 @@
 #include "ui_mainwindow.h"
 
 #include <QTimeZone>
-#include <iostream>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
     , timer(new QTimer)
+    , httpManager(new HTTPManager)
 {
     ui->setupUi(this);
 
@@ -17,6 +17,8 @@ MainWindow::MainWindow(QWidget *parent)
     setCurrentTime();
     timer->start(1000);
 
+    connect(httpManager, SIGNAL(ImageReady(QPixmap *)),
+            this, SLOT(processImage(QPixmap *)));
 }
 
 MainWindow::~MainWindow()
@@ -45,6 +47,17 @@ void MainWindow::setCurrentTime()
     ui->nyMinutes_LCDNumber_2->display(nyMinute);
     ui->nySeconds_LCDNumber_2->display(nySecond);
 
+}
+
+void MainWindow::processImage(QPixmap *image)
+{
+    ui->imgDisplay_label->setPixmap(*image);
+}
+
+
+void MainWindow::on_imgDL_pushButton_clicked()
+{
+    httpManager->sendImageRequest();
 }
 
 

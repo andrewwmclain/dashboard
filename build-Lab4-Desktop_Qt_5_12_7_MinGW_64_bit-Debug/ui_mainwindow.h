@@ -15,6 +15,7 @@
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
+#include <QtWidgets/QPushButton>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QWidget>
 
@@ -40,6 +41,9 @@ public:
     QLabel *label_2;
     QLabel *label_3;
     QLabel *label_4;
+    QLabel *label_5;
+    QPushButton *imgDL_pushButton;
+    QLabel *imgDisplay_label;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -125,6 +129,18 @@ public:
         label_4 = new QLabel(centralwidget);
         label_4->setObjectName(QString::fromUtf8("label_4"));
         label_4->setGeometry(QRect(620, 110, 71, 17));
+        label_5 = new QLabel(centralwidget);
+        label_5->setObjectName(QString::fromUtf8("label_5"));
+        label_5->setGeometry(QRect(460, 10, 121, 31));
+        QFont font1;
+        font1.setPointSize(10);
+        label_5->setFont(font1);
+        imgDL_pushButton = new QPushButton(centralwidget);
+        imgDL_pushButton->setObjectName(QString::fromUtf8("imgDL_pushButton"));
+        imgDL_pushButton->setGeometry(QRect(80, 300, 181, 81));
+        imgDisplay_label = new QLabel(centralwidget);
+        imgDisplay_label->setObjectName(QString::fromUtf8("imgDisplay_label"));
+        imgDisplay_label->setGeometry(QRect(310, 230, 361, 221));
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
@@ -146,6 +162,9 @@ public:
         label_2->setText(QApplication::translate("MainWindow", "London", nullptr));
         label_3->setText(QApplication::translate("MainWindow", "New York", nullptr));
         label_4->setText(QApplication::translate("MainWindow", "Tokyo", nullptr));
+        label_5->setText(QApplication::translate("MainWindow", "Current Time:", nullptr));
+        imgDL_pushButton->setText(QApplication::translate("MainWindow", "Image Download/Display", nullptr));
+        imgDisplay_label->setText(QString());
     } // retranslateUi
 
 };
