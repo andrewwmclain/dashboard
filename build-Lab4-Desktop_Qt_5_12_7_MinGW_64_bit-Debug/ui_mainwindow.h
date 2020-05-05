@@ -11,8 +11,10 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QGroupBox>
 #include <QtWidgets/QLCDNumber>
 #include <QtWidgets/QLabel>
+#include <QtWidgets/QLineEdit>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
@@ -43,6 +45,9 @@ public:
     QLabel *label_4;
     QLabel *label_5;
     QPushButton *imgDL_pushButton;
+    QLineEdit *zipCode_lineEdit;
+    QLabel *zipCode_label;
+    QGroupBox *groupBox;
     QLabel *imgDisplay_label;
     QMenuBar *menubar;
     QStatusBar *statusbar;
@@ -71,7 +76,7 @@ public:
         currentMinutes_LCDNumber->setProperty("value", QVariant(22.000000000000000));
         label = new QLabel(centralwidget);
         label->setObjectName(QString::fromUtf8("label"));
-        label->setGeometry(QRect(25, 25, 350, 100));
+        label->setGeometry(QRect(25, 20, 350, 60));
         QFont font;
         font.setPointSize(18);
         label->setFont(font);
@@ -137,10 +142,21 @@ public:
         label_5->setFont(font1);
         imgDL_pushButton = new QPushButton(centralwidget);
         imgDL_pushButton->setObjectName(QString::fromUtf8("imgDL_pushButton"));
-        imgDL_pushButton->setGeometry(QRect(80, 300, 181, 81));
-        imgDisplay_label = new QLabel(centralwidget);
+        imgDL_pushButton->setGeometry(QRect(960, 40, 90, 30));
+        imgDL_pushButton->setFont(font1);
+        zipCode_lineEdit = new QLineEdit(centralwidget);
+        zipCode_lineEdit->setObjectName(QString::fromUtf8("zipCode_lineEdit"));
+        zipCode_lineEdit->setGeometry(QRect(800, 40, 150, 30));
+        zipCode_label = new QLabel(centralwidget);
+        zipCode_label->setObjectName(QString::fromUtf8("zipCode_label"));
+        zipCode_label->setGeometry(QRect(710, 40, 85, 30));
+        zipCode_label->setFont(font1);
+        groupBox = new QGroupBox(centralwidget);
+        groupBox->setObjectName(QString::fromUtf8("groupBox"));
+        groupBox->setGeometry(QRect(40, 180, 301, 291));
+        imgDisplay_label = new QLabel(groupBox);
         imgDisplay_label->setObjectName(QString::fromUtf8("imgDisplay_label"));
-        imgDisplay_label->setGeometry(QRect(310, 230, 361, 221));
+        imgDisplay_label->setGeometry(QRect(10, 40, 281, 241));
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
@@ -163,7 +179,9 @@ public:
         label_3->setText(QApplication::translate("MainWindow", "New York", nullptr));
         label_4->setText(QApplication::translate("MainWindow", "Tokyo", nullptr));
         label_5->setText(QApplication::translate("MainWindow", "Current Time:", nullptr));
-        imgDL_pushButton->setText(QApplication::translate("MainWindow", "Image Download/Display", nullptr));
+        imgDL_pushButton->setText(QApplication::translate("MainWindow", "Search", nullptr));
+        zipCode_label->setText(QApplication::translate("MainWindow", "Zip Code:", nullptr));
+        groupBox->setTitle(QApplication::translate("MainWindow", "Maps", nullptr));
         imgDisplay_label->setText(QString());
     } // retranslateUi
 

@@ -31,5 +31,7 @@ private:
     Ui::MainWindow *ui;
     QTimer* timer;
     HTTPManager *httpManager;
+
+    QString zip;
 };
 #endif // MAINWINDOW_H
