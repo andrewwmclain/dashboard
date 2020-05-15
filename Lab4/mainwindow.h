@@ -22,10 +22,11 @@ public:
 
 private slots:
     void setCurrentTime();
-
     void processImage(QPixmap *);
+    void processWeatherJson(QJsonObject *json);
 
     void on_imgDL_pushButton_clicked();
+    void downloadFinished(QNetworkReply *reply);
 
 private:
     Ui::MainWindow *ui;
