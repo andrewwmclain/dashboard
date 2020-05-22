@@ -49,6 +49,7 @@ public:
     QLabel *zipCode_label;
     QGroupBox *groupBox;
     QLabel *imgDisplay_label;
+    QLabel *label;
     QGroupBox *groupBox_2;
     QLabel *temperature_label;
     QLabel *weatherIcon_label;
@@ -59,6 +60,10 @@ public:
     QLabel *condition_label;
     QLabel *humidity_label;
     QLabel *humidity_label_2;
+    QLabel *label_6;
+    QGroupBox *groupBox_3;
+    QLabel *imgDisplay_label_2;
+    QLabel *label_7;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -163,22 +168,37 @@ public:
         zipCode_label->setFont(font1);
         groupBox = new QGroupBox(centralwidget);
         groupBox->setObjectName(QString::fromUtf8("groupBox"));
-        groupBox->setGeometry(QRect(40, 180, 320, 290));
+        groupBox->setGeometry(QRect(25, 180, 320, 290));
+        QFont font2;
+        font2.setPointSize(12);
+        groupBox->setFont(font2);
+        groupBox->setStyleSheet(QString::fromUtf8("QGroupBox#groupBox{\n"
+"	background-color: #b2ebf2;\n"
+"	border: 2px solid gray;\n"
+"    border-radius: 5px;\n"
+"}"));
         imgDisplay_label = new QLabel(groupBox);
         imgDisplay_label->setObjectName(QString::fromUtf8("imgDisplay_label"));
-        imgDisplay_label->setGeometry(QRect(10, 40, 281, 241));
+        imgDisplay_label->setGeometry(QRect(10, 40, 301, 241));
+        label = new QLabel(groupBox);
+        label->setObjectName(QString::fromUtf8("label"));
+        label->setGeometry(QRect(10, 5, 111, 21));
+        label->setFont(font2);
         groupBox_2 = new QGroupBox(centralwidget);
         groupBox_2->setObjectName(QString::fromUtf8("groupBox_2"));
-        groupBox_2->setGeometry(QRect(390, 180, 330, 290));
-        groupBox_2->setStyleSheet(QString::fromUtf8("groupBox_2{\n"
-"	background-color: #1f4068;\n"
+        groupBox_2->setGeometry(QRect(370, 180, 330, 290));
+        groupBox_2->setFont(font2);
+        groupBox_2->setStyleSheet(QString::fromUtf8("QGroupBox#groupBox_2{\n"
+"	background-color: #b2ebf2;\n"
+"	border: 2px solid gray;\n"
+"    border-radius: 5px;\n"
 "}"));
         temperature_label = new QLabel(groupBox_2);
         temperature_label->setObjectName(QString::fromUtf8("temperature_label"));
         temperature_label->setGeometry(QRect(10, 30, 130, 81));
-        QFont font2;
-        font2.setPointSize(25);
-        temperature_label->setFont(font2);
+        QFont font3;
+        font3.setPointSize(25);
+        temperature_label->setFont(font3);
         temperature_label->setAlignment(Qt::AlignCenter);
         weatherIcon_label = new QLabel(groupBox_2);
         weatherIcon_label->setObjectName(QString::fromUtf8("weatherIcon_label"));
@@ -186,35 +206,53 @@ public:
         high_label = new QLabel(groupBox_2);
         high_label->setObjectName(QString::fromUtf8("high_label"));
         high_label->setGeometry(QRect(10, 140, 65, 51));
-        QFont font3;
-        font3.setPointSize(12);
-        high_label->setFont(font3);
+        high_label->setFont(font2);
         low_label = new QLabel(groupBox_2);
         low_label->setObjectName(QString::fromUtf8("low_label"));
         low_label->setGeometry(QRect(10, 210, 65, 51));
-        low_label->setFont(font3);
+        low_label->setFont(font2);
         high_label_2 = new QLabel(groupBox_2);
         high_label_2->setObjectName(QString::fromUtf8("high_label_2"));
         high_label_2->setGeometry(QRect(90, 140, 65, 51));
-        high_label_2->setFont(font3);
+        high_label_2->setFont(font2);
         low_label_2 = new QLabel(groupBox_2);
         low_label_2->setObjectName(QString::fromUtf8("low_label_2"));
         low_label_2->setGeometry(QRect(90, 210, 65, 51));
-        low_label_2->setFont(font3);
+        low_label_2->setFont(font2);
         condition_label = new QLabel(groupBox_2);
         condition_label->setObjectName(QString::fromUtf8("condition_label"));
-        condition_label->setGeometry(QRect(180, 140, 85, 51));
-        condition_label->setFont(font3);
+        condition_label->setGeometry(QRect(180, 140, 141, 51));
+        condition_label->setFont(font2);
         humidity_label = new QLabel(groupBox_2);
         humidity_label->setObjectName(QString::fromUtf8("humidity_label"));
         humidity_label->setGeometry(QRect(180, 220, 75, 31));
-        QFont font4;
-        font4.setPointSize(9);
-        humidity_label->setFont(font4);
+        humidity_label->setFont(font2);
         humidity_label_2 = new QLabel(groupBox_2);
         humidity_label_2->setObjectName(QString::fromUtf8("humidity_label_2"));
         humidity_label_2->setGeometry(QRect(270, 220, 51, 31));
+        QFont font4;
+        font4.setPointSize(9);
         humidity_label_2->setFont(font4);
+        label_6 = new QLabel(groupBox_2);
+        label_6->setObjectName(QString::fromUtf8("label_6"));
+        label_6->setGeometry(QRect(10, 5, 111, 21));
+        label_6->setFont(font2);
+        groupBox_3 = new QGroupBox(centralwidget);
+        groupBox_3->setObjectName(QString::fromUtf8("groupBox_3"));
+        groupBox_3->setGeometry(QRect(725, 180, 320, 290));
+        groupBox_3->setFont(font2);
+        groupBox_3->setStyleSheet(QString::fromUtf8("QGroupBox#groupBox_3{\n"
+"	background-color: #b2ebf2;\n"
+"	border: 2px solid gray;\n"
+"    border-radius: 5px;\n"
+"}"));
+        imgDisplay_label_2 = new QLabel(groupBox_3);
+        imgDisplay_label_2->setObjectName(QString::fromUtf8("imgDisplay_label_2"));
+        imgDisplay_label_2->setGeometry(QRect(10, 40, 301, 241));
+        label_7 = new QLabel(groupBox_3);
+        label_7->setObjectName(QString::fromUtf8("label_7"));
+        label_7->setGeometry(QRect(10, 5, 111, 21));
+        label_7->setFont(font2);
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
@@ -239,18 +277,23 @@ public:
         label_5->setText(QApplication::translate("MainWindow", "Current Time:", nullptr));
         imgDL_pushButton->setText(QApplication::translate("MainWindow", "Search", nullptr));
         zipCode_label->setText(QApplication::translate("MainWindow", "Zip Code:", nullptr));
-        groupBox->setTitle(QApplication::translate("MainWindow", "Maps", nullptr));
+        groupBox->setTitle(QString());
         imgDisplay_label->setText(QString());
-        groupBox_2->setTitle(QApplication::translate("MainWindow", "Weather", nullptr));
+        label->setText(QApplication::translate("MainWindow", "Maps", nullptr));
+        groupBox_2->setTitle(QString());
         temperature_label->setText(QString());
         weatherIcon_label->setText(QString());
-        high_label->setText(QApplication::translate("MainWindow", "High: ", nullptr));
-        low_label->setText(QApplication::translate("MainWindow", "Low:", nullptr));
+        high_label->setText(QString());
+        low_label->setText(QString());
         high_label_2->setText(QString());
         low_label_2->setText(QString());
         condition_label->setText(QString());
-        humidity_label->setText(QApplication::translate("MainWindow", "Humidity:", nullptr));
+        humidity_label->setText(QString());
         humidity_label_2->setText(QString());
+        label_6->setText(QApplication::translate("MainWindow", "Weather", nullptr));
+        groupBox_3->setTitle(QString());
+        imgDisplay_label_2->setText(QString());
+        label_7->setText(QApplication::translate("MainWindow", "Pictures", nullptr));
     } // retranslateUi
 
 };

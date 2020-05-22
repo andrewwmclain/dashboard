@@ -1,0 +1,10 @@
+<RCC>
+    <qresource prefix="/">
+        <file>blue_background.jpg</file>
+        <file>mountrainier.jpg</file>
+        <file>pikeplace.jpg</file>
+        <file>spaceneedle.jpg</file>
+        <file>boo.JPG</file>
+        <file>cloud.JPG</file>
+    </qresource>
+</RCC>

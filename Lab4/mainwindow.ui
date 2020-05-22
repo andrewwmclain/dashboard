@@ -330,21 +330,33 @@
    <widget class="QGroupBox" name="groupBox">
     <property name="geometry">
      <rect>
-      <x>40</x>
+      <x>25</x>
       <y>180</y>
       <width>320</width>
       <height>290</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QGroupBox#groupBox{
+	background-color: #b2ebf2;
+	border: 2px solid gray;
+    border-radius: 5px;
+}</string>
+    </property>
     <property name="title">
-     <string>Maps</string>
+     <string/>
     </property>
     <widget class="QLabel" name="imgDisplay_label">
      <property name="geometry">
       <rect>
        <x>10</x>
        <y>40</y>
-       <width>281</width>
+       <width>301</width>
        <height>241</height>
       </rect>
      </property>
@@ -352,23 +364,48 @@
       <string/>
      </property>
     </widget>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>5</y>
+       <width>111</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Maps</string>
+     </property>
+    </widget>
    </widget>
    <widget class="QGroupBox" name="groupBox_2">
     <property name="geometry">
      <rect>
-      <x>390</x>
+      <x>370</x>
       <y>180</y>
       <width>330</width>
       <height>290</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
     <property name="styleSheet">
-     <string notr="true">groupBox_2{
-	background-color: #1f4068;
+     <string notr="true">QGroupBox#groupBox_2{
+	background-color: #b2ebf2;
+	border: 2px solid gray;
+    border-radius: 5px;
 }</string>
     </property>
     <property name="title">
-     <string>Weather</string>
+     <string/>
     </property>
     <widget class="QLabel" name="temperature_label">
      <property name="geometry">
@@ -419,7 +456,7 @@
       </font>
      </property>
      <property name="text">
-      <string>High: </string>
+      <string/>
      </property>
     </widget>
     <widget class="QLabel" name="low_label">
@@ -437,7 +474,7 @@
       </font>
      </property>
      <property name="text">
-      <string>Low:</string>
+      <string/>
      </property>
     </widget>
     <widget class="QLabel" name="high_label_2">
@@ -481,7 +518,7 @@
       <rect>
        <x>180</x>
        <y>140</y>
-       <width>85</width>
+       <width>141</width>
        <height>51</height>
       </rect>
      </property>
@@ -505,11 +542,11 @@
      </property>
      <property name="font">
       <font>
-       <pointsize>9</pointsize>
+       <pointsize>12</pointsize>
       </font>
      </property>
      <property name="text">
-      <string>Humidity:</string>
+      <string/>
      </property>
     </widget>
     <widget class="QLabel" name="humidity_label_2">
@@ -528,6 +565,80 @@
      </property>
      <property name="text">
       <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_6">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>5</y>
+       <width>111</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Weather</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_3">
+    <property name="geometry">
+     <rect>
+      <x>725</x>
+      <y>180</y>
+      <width>320</width>
+      <height>290</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QGroupBox#groupBox_3{
+	background-color: #b2ebf2;
+	border: 2px solid gray;
+    border-radius: 5px;
+}</string>
+    </property>
+    <property name="title">
+     <string/>
+    </property>
+    <widget class="QLabel" name="imgDisplay_label_2">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>40</y>
+       <width>301</width>
+       <height>241</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_7">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>5</y>
+       <width>111</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Pictures</string>
      </property>
     </widget>
    </widget>

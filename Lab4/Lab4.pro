@@ -31,3 +31,11 @@ FORMS += \
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+RESOURCES += \
+    resources.qrc
+
+DISTFILES += \
+    ../../../QT Projects/Lab003/images/blue_background.jpg \
+    blue_background.jpg \
+    spaceneedle.jpg

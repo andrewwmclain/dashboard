@@ -28,11 +28,18 @@ private slots:
     void on_imgDL_pushButton_clicked();
     void downloadFinished(QNetworkReply *reply);
 
+    void changePic();
+
 private:
     Ui::MainWindow *ui;
     QTimer* timer;
+    QTimer* timer2;
     HTTPManager *httpManager;
 
     QString zip;
+
+    QPixmap slidePic;
+    size_t slideIndex;
+
 };
 #endif // MAINWINDOW_H

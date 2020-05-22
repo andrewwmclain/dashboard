@@ -9,6 +9,7 @@ MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
     , timer(new QTimer)
+    , timer2(new QTimer)
     , httpManager(new HTTPManager)
 {
     ui->setupUi(this);
@@ -29,15 +30,25 @@ MainWindow::MainWindow(QWidget *parent)
 
     ui->zipCode_lineEdit->setText(zip);
 
+
     QPalette groupBoxPalette = ui->groupBox->palette();
-    groupBoxPalette.setColor(QPalette::Window, QColor(31,64,104));
+    groupBoxPalette.setColor(QPalette::Window, QColor(178,235,242));
     ui->groupBox->setAutoFillBackground(true);
     ui->groupBox->setPalette(groupBoxPalette);
 
     QPalette groupBox2Palette = ui->groupBox_2->palette();
-    groupBox2Palette.setColor(QPalette::Window, QColor(31,64,104));
+    groupBox2Palette.setColor(QPalette::Window, QColor(178,235,242));
     ui->groupBox_2->setAutoFillBackground(true);
     ui->groupBox_2->setPalette(groupBox2Palette);
+
+    slideIndex = 0;
+
+    changePic();
+
+    connect(timer2, SIGNAL(timeout()),
+            this, SLOT(changePic()));
+
+    timer2->start(5000);
 }
 
 MainWindow::~MainWindow()
@@ -153,6 +164,10 @@ void MainWindow::on_imgDL_pushButton_clicked()
     qDebug() << zip;
     httpManager->sendImageRequest(zip);
     httpManager->sendWeatherRequest(zip);
+
+    ui->high_label->setText("High:");
+    ui->low_label->setText("Low:");
+    ui->humidity_label->setText("Humidity:");
 }
 
 void MainWindow::downloadFinished(QNetworkReply *reply)
@@ -162,5 +177,16 @@ void MainWindow::downloadFinished(QNetworkReply *reply)
     ui->weatherIcon_label->setPixmap(pm);
 }
 
-
+void MainWindow::changePic(){
+    QString pics[5] = {":/mountrainier.jpg", ":/pikeplace.jpg", ":/spaceneedle.jpg", ":/cloud.JPG",
+                     ":/boo.JPG"};
+    slideIndex++;
+    if(slideIndex > 4){
+        slideIndex = 0;
+    }
+    QPixmap slidePic;
+    slidePic.load(pics[slideIndex]);
+    ui->imgDisplay_label_2->setPixmap(slidePic);
+    ui->imgDisplay_label_2->setScaledContents(true);
+}
 
