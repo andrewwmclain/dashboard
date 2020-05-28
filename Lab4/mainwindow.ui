@@ -67,13 +67,14 @@
      <rect>
       <x>25</x>
       <y>20</y>
-      <width>350</width>
+      <width>381</width>
       <height>60</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <pointsize>18</pointsize>
+      <family>Garamond</family>
+      <pointsize>20</pointsize>
      </font>
     </property>
     <property name="text">
@@ -320,7 +321,7 @@
     </property>
     <property name="font">
      <font>
-      <pointsize>10</pointsize>
+      <pointsize>12</pointsize>
      </font>
     </property>
     <property name="text">
@@ -331,7 +332,7 @@
     <property name="geometry">
      <rect>
       <x>25</x>
-      <y>180</y>
+      <y>200</y>
       <width>320</width>
       <height>290</height>
      </rect>
@@ -360,6 +361,12 @@
        <height>241</height>
       </rect>
      </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel#imgDisplay_label{
+	border: 2px solid gray;
+    border-radius: 5px;
+}</string>
+     </property>
      <property name="text">
       <string/>
      </property>
@@ -387,7 +394,7 @@
     <property name="geometry">
      <rect>
       <x>370</x>
-      <y>180</y>
+      <y>200</y>
       <width>330</width>
       <height>290</height>
      </rect>
@@ -590,7 +597,7 @@
     <property name="geometry">
      <rect>
       <x>725</x>
-      <y>180</y>
+      <y>200</y>
       <width>320</width>
       <height>290</height>
      </rect>
@@ -618,6 +625,12 @@
        <width>301</width>
        <height>241</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel#imgDisplay_label_2{
+	border: 2px solid gray;
+    border-radius: 5px;
+}</string>
      </property>
      <property name="text">
       <string/>

@@ -91,9 +91,10 @@ public:
         currentMinutes_LCDNumber->setProperty("value", QVariant(22.000000000000000));
         greeting_label = new QLabel(centralwidget);
         greeting_label->setObjectName(QString::fromUtf8("greeting_label"));
-        greeting_label->setGeometry(QRect(25, 20, 350, 60));
+        greeting_label->setGeometry(QRect(25, 20, 381, 60));
         QFont font;
-        font.setPointSize(18);
+        font.setFamily(QString::fromUtf8("Garamond"));
+        font.setPointSize(20);
         greeting_label->setFont(font);
         nyHours_LCDNumber_2 = new QLCDNumber(centralwidget);
         nyHours_LCDNumber_2->setObjectName(QString::fromUtf8("nyHours_LCDNumber_2"));
@@ -165,12 +166,12 @@ public:
         zipCode_label = new QLabel(centralwidget);
         zipCode_label->setObjectName(QString::fromUtf8("zipCode_label"));
         zipCode_label->setGeometry(QRect(710, 40, 85, 30));
-        zipCode_label->setFont(font1);
-        groupBox = new QGroupBox(centralwidget);
-        groupBox->setObjectName(QString::fromUtf8("groupBox"));
-        groupBox->setGeometry(QRect(25, 180, 320, 290));
         QFont font2;
         font2.setPointSize(12);
+        zipCode_label->setFont(font2);
+        groupBox = new QGroupBox(centralwidget);
+        groupBox->setObjectName(QString::fromUtf8("groupBox"));
+        groupBox->setGeometry(QRect(25, 200, 320, 290));
         groupBox->setFont(font2);
         groupBox->setStyleSheet(QString::fromUtf8("QGroupBox#groupBox{\n"
 "	background-color: #b2ebf2;\n"
@@ -180,13 +181,17 @@ public:
         imgDisplay_label = new QLabel(groupBox);
         imgDisplay_label->setObjectName(QString::fromUtf8("imgDisplay_label"));
         imgDisplay_label->setGeometry(QRect(10, 40, 301, 241));
+        imgDisplay_label->setStyleSheet(QString::fromUtf8("QLabel#imgDisplay_label{\n"
+"	border: 2px solid gray;\n"
+"    border-radius: 5px;\n"
+"}"));
         label = new QLabel(groupBox);
         label->setObjectName(QString::fromUtf8("label"));
         label->setGeometry(QRect(10, 5, 111, 21));
         label->setFont(font2);
         groupBox_2 = new QGroupBox(centralwidget);
         groupBox_2->setObjectName(QString::fromUtf8("groupBox_2"));
-        groupBox_2->setGeometry(QRect(370, 180, 330, 290));
+        groupBox_2->setGeometry(QRect(370, 200, 330, 290));
         groupBox_2->setFont(font2);
         groupBox_2->setStyleSheet(QString::fromUtf8("QGroupBox#groupBox_2{\n"
 "	background-color: #b2ebf2;\n"
@@ -239,7 +244,7 @@ public:
         label_6->setFont(font2);
         groupBox_3 = new QGroupBox(centralwidget);
         groupBox_3->setObjectName(QString::fromUtf8("groupBox_3"));
-        groupBox_3->setGeometry(QRect(725, 180, 320, 290));
+        groupBox_3->setGeometry(QRect(725, 200, 320, 290));
         groupBox_3->setFont(font2);
         groupBox_3->setStyleSheet(QString::fromUtf8("QGroupBox#groupBox_3{\n"
 "	background-color: #b2ebf2;\n"
@@ -249,6 +254,10 @@ public:
         imgDisplay_label_2 = new QLabel(groupBox_3);
         imgDisplay_label_2->setObjectName(QString::fromUtf8("imgDisplay_label_2"));
         imgDisplay_label_2->setGeometry(QRect(10, 40, 301, 241));
+        imgDisplay_label_2->setStyleSheet(QString::fromUtf8("QLabel#imgDisplay_label_2{\n"
+"	border: 2px solid gray;\n"
+"    border-radius: 5px;\n"
+"}"));
         label_7 = new QLabel(groupBox_3);
         label_7->setObjectName(QString::fromUtf8("label_7"));
         label_7->setGeometry(QRect(10, 5, 111, 21));
